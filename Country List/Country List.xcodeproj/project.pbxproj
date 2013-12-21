@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E4463491865BF8900A3A5FA /* CountryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E4463481865BF8900A3A5FA /* CountryCell.m */; };
 		0EF0F4DF1861F7EC007CF9B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF0F4DE1861F7EC007CF9B0 /* Foundation.framework */; };
 		0EF0F4E11861F7EC007CF9B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF0F4E01861F7EC007CF9B0 /* CoreGraphics.framework */; };
 		0EF0F4E31861F7EC007CF9B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EF0F4E21861F7EC007CF9B0 /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E4463471865BF8900A3A5FA /* CountryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CountryCell.h; path = CountryList/CountryCell.h; sourceTree = "<group>"; };
+		0E4463481865BF8900A3A5FA /* CountryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CountryCell.m; path = CountryList/CountryCell.m; sourceTree = "<group>"; };
 		0EF0F4DB1861F7EC007CF9B0 /* Country List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Country List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF0F4DE1861F7EC007CF9B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0EF0F4E01861F7EC007CF9B0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -172,6 +175,8 @@
 				0EF0F5181861FA0E007CF9B0 /* CountryListViewController.xib */,
 				0EF0F51B1861FB0C007CF9B0 /* CountryListDataSource.h */,
 				0EF0F51C1861FB0C007CF9B0 /* CountryListDataSource.m */,
+				0E4463471865BF8900A3A5FA /* CountryCell.h */,
+				0E4463481865BF8900A3A5FA /* CountryCell.m */,
 			);
 			name = CountryList;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 				0EF0F5191861FA0E007CF9B0 /* CountryListViewController.m in Sources */,
 				0EF0F4EF1861F7EC007CF9B0 /* AppDelegate.m in Sources */,
 				0EF0F4EB1861F7EC007CF9B0 /* main.m in Sources */,
+				0E4463491865BF8900A3A5FA /* CountryCell.m in Sources */,
 				0EF0F51D1861FB0C007CF9B0 /* CountryListDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -490,6 +496,7 @@
 				0EF0F50F1861F7EC007CF9B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0EF0F5101861F7EC007CF9B0 /* Build configuration list for PBXNativeTarget "Country ListTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +505,7 @@
 				0EF0F5121861F7EC007CF9B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

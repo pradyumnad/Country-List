@@ -30,7 +30,11 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <items>
                         <navigationItem id="eZg-3L-Xdh">
-                            <barButtonItem key="rightBarButtonItem" title="Done" id="MsQ-Xz-NK2"/>
+                            <barButtonItem key="rightBarButtonItem" title="Done" id="MsQ-Xz-NK2">
+                                <connections>
+                                    <action selector="done:" destination="-1" id="utI-eZ-zSq"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>

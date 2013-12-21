@@ -8,6 +8,7 @@
 
 #import "CountryListViewController.h"
 #import "CountryListDataSource.h"
+#import "CountryCell.h"
 
 @interface CountryListViewController ()
 
@@ -17,11 +18,12 @@
 
 @implementation CountryListViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil delegate:(id)delegate
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithNibName:nibNameOrNil bundle:nil];
     if (self) {
         // Custom initialization
+        _delegate = delegate;
     }
     return self;
 }
@@ -56,10 +58,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    CountryCell *cell = (CountryCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
+        cell = [[CountryCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellIdentifier];
     }
     
     cell.textLabel.text = [[_dataRows objectAtIndex:indexPath.row] valueForKey:kCountryName];
@@ -71,9 +73,7 @@
 #pragma mark - UITableView Delegate methods
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([_delegate respondsToSelector:@selector(didSelectCountry:)]) {
-        [self.delegate didSelectCountry:[_dataRows objectAtIndex:indexPath.row]];
-    }
+    
 }
 
 #pragma mark -
@@ -81,6 +81,12 @@
 
 - (IBAction)done:(id)sender
 {
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    if ([_delegate respondsToSelector:@selector(didSelectCountry:)]) {
+        [self.delegate didSelectCountry:[_dataRows objectAtIndex:[_tableView indexPathForSelectedRow].row]];
+        [self dismissViewControllerAnimated:YES completion:NULL];
+    } else {
+        NSLog(@"CountryListView Delegate : didSelectCountry not implemented");
+    }
 }
+
 @end

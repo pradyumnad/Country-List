@@ -29,7 +29,13 @@
 
 - (IBAction)show:(id)sender {
     
-    CountryListViewController *cv = [[CountryListViewController alloc] initWithNibName:@"CountryListViewController" bundle:nil];
+    CountryListViewController *cv = [[CountryListViewController alloc] initWithNibName:@"CountryListViewController" delegate:self];
     [self presentViewController:cv animated:YES completion:NULL];
 }
+
+- (void)didSelectCountry:(NSDictionary *)country
+{
+    NSLog(@"%@", country);
+}
+
 @end

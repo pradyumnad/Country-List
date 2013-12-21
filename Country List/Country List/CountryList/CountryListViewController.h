@@ -15,4 +15,6 @@
 @interface CountryListViewController : UIViewController
 
 @property (nonatomic, assign) id<CountryListViewDelegate>delegate;
+
+- (id)initWithNibName:(NSString *)nibNameOrNil delegate:(id)delegate;
 @end
