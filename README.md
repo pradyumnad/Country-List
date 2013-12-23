@@ -5,7 +5,7 @@ Its pain in the AZZ to collect the Countries List and their Calling Codes.
 
 So here it is, a small library to provide you a View Controller with Country List along with Calling Code and Country Code.
 
-![Screen 1](https://github.com/pradyumnad/SearchHUD/blob/master/Screen%202.png?raw=true)
+![Screen 1](https://github.com/pradyumnad/Country-List/blob/master/ScreenShot.png?raw=true)
 
 Including into your Project
 ---------------------------
