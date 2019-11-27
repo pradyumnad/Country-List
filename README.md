@@ -1,9 +1,10 @@
 Country-List
 ============
 
-Its pain in the AZZ to collect the Countries List and their Calling Codes.
+Its pain in the AZZ to collect the Calling Codes for all the Countries.
 
-So here it is, a small library to provide you a View Controller with Country List along with Calling Code and Country Code.
+This repo exactly solves that problem.  
+A View Controller with Country List along with Calling Code and Country Code.
 
 ![Screen 1](https://github.com/pradyumnad/Country-List/blob/master/ScreenShot.png?raw=true)
 
@@ -31,5 +32,4 @@ Available under the CC BY 3.0 license. See the LICENSE file for more info.
 
 Attribution
 -----------
-
 Thanks to Mr Nicolas Goles for his awesome gist https://gist.github.com/Goles/3196253
